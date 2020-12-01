@@ -30,6 +30,7 @@ class SceneManager(Scene) :
     
     def changeScene(self, replaced_scene_name) :
         self.current_scene = self.sceneRecord[replaced_scene_name]
+        self.current_scene.__init__(self.screen, self.clock)
 
     def update(self) :
         self.current_scene.update()
